@@ -1,0 +1,30 @@
+/*It is used to define the special state of element */
+ /* unvisited link */
+a:link {
+  color: #FF0000;
+}
+
+/* visited link */
+a:visited {
+  color: #00FF00;
+}
+
+/* mouse over link */
+a:hover {
+  color: #FF00FF;
+}
+
+/* selected link */
+a:active {
+  color: #0000FF;
+} 
+
+/*the first child of any <p> element*/
+p:first-child {
+  color: blue;
+}
+
+/*Insert content after every <p> element*/
+p::after{
+	content: '';
+}
