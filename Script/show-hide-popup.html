@@ -31,7 +31,6 @@
 <!-- modal 2 end -->
 
 <style>
-
 /*to highlight the popup on screen here added the light overlay in te background*/
 body.body-overlay {
   overflow: hidden;
@@ -111,26 +110,24 @@ body.body-overlay:before {
     left: 0;
 }
 /*modal 2 end */
-
 </style>
 
 <script>
-
     $(document).ready(function () {
         // modal 1
         // show modal on click of button
         $('.subscribeUs').click(function() {
             $('#subPopup').fadeIn('500');   // .show();
-            $("body").addClass('body-overlay');
-            $('body').css('overflow','hidden');
+            $("body").addClass('body-overlay');   // when popup is visible added the class to the body element.
+            $('body').css('overflow','hidden');   // when popup is visible the page scroll is hidden or we can say that the we cannot scroll the page when the popup is visible
         });
 
         // close modal on click of close icon
         $('.close').click(function() {
             $('#subPopup').fadeOut('500');      // .hide();
             $('#advertisement').hide();
-            $('body').css('overflow','auto');
-            $("body").removeClass('body-overlay');
+            $("body").removeClass('body-overlay');   // when popup is closed removed the class from the body element.
+            $('body').css('overflow','auto');        // page scroll is auto when popup is closed.
         });
 
         // Modal 2
@@ -144,5 +141,4 @@ body.body-overlay:before {
         };
         window.addEventListener("scroll", myScrollFunc);
     });
-
 </script>
