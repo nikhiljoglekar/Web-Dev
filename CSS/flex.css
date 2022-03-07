@@ -1,0 +1,49 @@
+.class {
+  
+  display: flex; /* or inline-flex */
+
+  flex-direction: row | row-reverse | column | column-reverse;
+  /*row (default): left to right in ltr; right to left in rtl
+  row-reverse: right to left in ltr; left to right in rtl
+  column: same as row but top to bottom
+  column-reverse: same as row-reverse but bottom to top*/  
+
+  flex-wrap: nowrap | wrap | wrap-reverse;
+  /*nowrap (default): all flex items will be on one line
+  wrap: flex items will wrap onto multiple lines, from top to bottom.
+  wrap-reverse: flex items will wrap onto multiple lines from bottom to top.*/
+
+  flex-flow: column wrap;
+  /*This is a shorthand for the flex-direction and flex-wrap properties, which together define the flex container’s main and cross axes. The default value is row nowrap.*/
+
+  flex-flow: column wrap;
+  /*This is a shorthand for the flex-direction and flex-wrap properties, which together define the flex container’s main and cross axes. The default value is row nowrap.*/
+
+  justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly | start | end | left | right ... + safe | unsafe;
+  /*Used to aligned the item on the x-axis*/
+
+  align-items: stretch | flex-start | flex-end | center | baseline | first baseline | last baseline | start | end | self-start | self-end + ... safe | unsafe;
+  /*Used to aligned the item on the y-axis*/
+
+  gap: 10px;
+  gap: 10px 20px; /* row-gap value column-gap value */
+  row-gap: 10px;
+  column-gap: 20px;
+
+  order: 5; /* default is 0 */
+  /* The order property controls the order in which they appear in the flex container.*/
+
+  flex-grow: 4;
+  /*This defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a proportion. It dictates what amount of the available space inside the flex container the item should take up.*/
+  /*Negative numbers are invalid.*/
+
+  flex-shrink: 3; /* default 1 */
+  /*This defines the ability for a flex item to shrink if necessary.*/
+
+  flex-basis:  | auto; /* default auto */
+  /*This defines the default size of an element before the remaining space is distributed.*/
+
+  align-self: auto | flex-start | flex-end | center | baseline | stretch;
+  /*This allows the default alignment (or the one specified by align-items) to be overridden for individual flex items.*/
+
+}
